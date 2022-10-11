@@ -1,0 +1,22 @@
+/* Generated Styles */
+
+body {
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333333;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+/* Top Styles */
+
+#top{
+    background-color: #555555;
+    padding: 10px 0;
+}
+#top .offer {
+    color: #ffffff
+}
+#top .offer .btn {
+    text-transform: uppercase;
+}
