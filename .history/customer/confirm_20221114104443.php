@@ -33,16 +33,16 @@
                     <!-- cmenu Begin -->
 
                     <li>
-                        <a href="customer_register.php">Register</a>
+                        <a href="../customer_register.php">Register</a>
                     </li>
                     <li>
-                        <a href="customer/my_account.php">My Account</a>
+                        <a href="my_account.php">My Account</a>
                     </li>
                     <li>
-                        <a href="cart.php">Go To Cart</a>
+                        <a href="../cart.php">Go To Cart</a>
                     </li>
                     <li>
-                        <a href="checkout.php">Login</a>
+                        <a href="../checkout.php">Login</a>
                     </li>
 
                 </ul><!-- menu Finish -->
@@ -97,20 +97,20 @@
                     <ul class="nav navbar-nav left">
                         <!-- nav navbar-nav left Begin -->
 
+                        <li>
+                            <a href="../index.php">Home</a>
+                        </li>
+                        <li>
+                            <a href="../shop.php">Shop</a>
+                        </li>
                         <li class="active">
-                            <a href="index.php">Home</a>
+                            <a href="my_account.php">My Account</a>
                         </li>
                         <li>
-                            <a href="shop.php">Shop</a>
+                            <a href="../cart.php">Shopping Cart</a>
                         </li>
                         <li>
-                            <a href="customer/my_account.php">My Account</a>
-                        </li>
-                        <li>
-                            <a href="cart.php">Shopping Cart</a>
-                        </li>
-                        <li>
-                            <a href="contact.php">Contact Us</a>
+                            <a href="../contact.php">Contact Us</a>
                         </li>
 
                     </ul><!-- nav navbar-nav left Finish -->
@@ -188,7 +188,7 @@
                         <a href="index.php">Home</a>
                     </li>
                     <li>
-                        Register
+                        My Account
                     </li>
                 </ul><!-- breadcrumb Finish -->
 
@@ -211,105 +211,87 @@
                 <div class="box">
                     <!-- box Begin -->
 
-                    <div class="box-header">
-                        <!-- box-header Begin -->
+                    <h1 align="center"> Please confirm your payment</h1>
 
-                        <center>
-                            <!-- center Begin -->
+                    <form action="confirm.php" method="post" enctype="multipart/form-data">
+                        <!-- form Begin -->
 
-                            <h2> Register a new account </h2>
+                        <div class="form-group">
+                            <!-- form-group Begin -->
 
-                        </center><!-- center Finish -->
+                            <label> Invoice No: </label>
 
-                        <form action="customer_register.php" method="post" enctype="multipart/form-data">
-                            <!-- form Begin -->
+                            <input type="text" class="form-control" name="invoice_no" required>
 
-                            <div class="form-group">
-                                <!-- form-group Begin -->
+                        </div><!-- form-group Finish -->
 
-                                <label>Your Name</label>
+                        <div class="form-group">
+                            <!-- form-group Begin -->
 
-                                <input type="text" class="form-control" name="c_name" required>
+                            <label> Amount Sent: </label>
 
-                            </div><!-- form-group Finish -->
+                            <input type="text" class="form-control" name="amount_sent" required>
 
-                            <div class="form-group">
-                                <!-- form-group Begin -->
+                        </div><!-- form-group Finish -->
 
-                                <label>Your Email</label>
+                        <div class="form-group">
+                            <!-- form-group Begin -->
 
-                                <input type="text" class="form-control" name="c_email" required>
+                            <label> Select Payment Mode: </label>
 
-                            </div><!-- form-group Finish -->
+                            <select name="payment_mode" class="form-control">
+                                <!-- form-control Begin -->
 
-                            <div class="form-group">
-                                <!-- form-group Begin -->
+                                <option> Select Payment Mode </option>
+                                <option> Back Code </option>
+                                <option> UBL / Omni Paisa </option>
+                                <option> Easy Paisa </option>
+                                <option> Western Union </option>
 
-                                <label>Your Password</label>
+                            </select><!-- form-control Finish -->
 
-                                <input type="password" class="form-control" name="c_pass" required>
+                        </div><!-- form-group Finish -->
 
-                            </div><!-- form-group Finish -->
+                        <div class="form-group">
+                            <!-- form-group Begin -->
 
-                            <div class="form-group">
-                                <!-- form-group Begin -->
+                            <label> Transaction / Reference ID: </label>
 
-                                <label>Your Country</label>
+                            <input type="text" class="form-control" name="ref_no" required>
 
-                                <input type="text" class="form-control" name="c_country" required>
+                        </div><!-- form-group Finish -->
 
-                            </div><!-- form-group Finish -->
+                        <div class="form-group">
+                            <!-- form-group Begin -->
 
-                            <div class="form-group">
-                                <!-- form-group Begin -->
+                            <label> Omni Paisa / East Paisa: </label>
 
-                                <label>Your City</label>
+                            <input type="text" class="form-control" name="code" required>
 
-                                <input type="text" class="form-control" name="c_city" required>
+                        </div><!-- form-group Finish -->
 
-                            </div><!-- form-group Finish -->
+                        <div class="form-group">
+                            <!-- form-group Begin -->
 
-                            <div class="form-group">
-                                <!-- form-group Begin -->
+                            <label> Payment Date: </label>
 
-                                <label>Your Contact</label>
+                            <input type="text" class="form-control" name="date" required>
 
-                                <input type="text" class="form-control" name="c_contact" required>
+                        </div><!-- form-group Finish -->
 
-                            </div><!-- form-group Finish -->
+                        <div class="text-center">
+                            <!-- text-center Begin -->
 
-                            <div class="form-group">
-                                <!-- form-group Begin -->
+                            <button class="btn btn-primary btn-lg">
+                                <!-- tn btn-primary btn-lg Begin -->
 
-                                <label>Your Address</label>
+                                <i class="fa fa-user-md"></i> Confirm Payment
 
-                                <input type="text" class="form-control" name="c_address" required>
+                            </button><!-- tn btn-primary btn-lg Finish -->
 
-                            </div><!-- form-group Finish -->
+                        </div><!-- text-center Finish -->
 
-                            <div class="form-group">
-                                <!-- form-group Begin -->
-
-                                <label>Your Profile Picture</label>
-
-                                <input type="file" class="form-control form-height-custom" name="c_image" required>
-
-                            </div><!-- form-group Finish -->
-
-                            <div class="text-center">
-                                <!-- text-center Begin -->
-
-                                <button type="submit" name="register" class="btn btn-primary">
-
-                                    <i class="fa fa-user-md"></i> Register
-
-                                </button>
-
-                            </div><!-- text-center Finish -->
-
-                        </form><!-- form Finish -->
-
-                    </div><!-- box-header Finish -->
+                    </form><!-- form Finish -->
 
                 </div><!-- box Finish -->
 

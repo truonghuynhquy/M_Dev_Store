@@ -3,64 +3,60 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>M-Dev Store</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M-Dev Shop</title>
     <link rel="stylesheet" href="styles/bootstrap-337.min.css">
-    <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
 </head>
 
 <body>
-
     <div id="top">
-        <!-- Top Begin -->
+        <!--  Top:     Begin  -->
 
         <div class="container">
-            <!-- container Begin -->
-
+            <!--  Container:     Begin  -->
             <div class="col-md-6 offer">
-                <!-- col-md-6 offer Begin -->
-
+                <!--  col-md-6 offer:     Begin  -->
                 <a href="#" class="btn btn-success btn-sm">Welcome</a>
-                <a href="checkout.php">4 Items In Your Cart | Total Price: $300 </a>
+                <a href="checkout.php">4 Items In Your Cart | Total Price: $300</a>
+            </div><!--  col-md-6:     Finish  -->
 
-            </div><!-- col-md-6 offer Finish -->
-
-            <div class="col-md-6">
-                <!-- col-md-6 Begin -->
+            <div class="col md-6">
+                <!--  col-md-6:     Begin  -->
 
                 <ul class="menu">
-                    <!-- cmenu Begin -->
-
+                    <!--  menu:     Begin  -->
                     <li>
-                        <a href="customer_register.php">Register</a>
+                        <a href="../customer_register.php">Register</a>
                     </li>
                     <li>
-                        <a href="customer/my_account.php">My Account</a>
+                        <a href="my_account.php">My Account</a>
                     </li>
                     <li>
-                        <a href="cart.php">Go To Cart</a>
+                        <a href="../cart.php">Go to Cart</a>
                     </li>
                     <li>
-                        <a href="checkout.php">Login</a>
+                        <a href="../checkout.php">Login</a>
                     </li>
 
-                </ul><!-- menu Finish -->
+                </ul><!--  menu:     Finish  -->
 
-            </div><!-- col-md-6 Finish -->
+            </div><!--  col-md-6:     Finish  -->
 
-        </div><!-- container Finish -->
+        </div><!--  Container:     Finish  -->
 
-    </div><!-- Top Finish -->
+    </div><!--  Top:    Finish  -->
 
     <div id="navbar" class="navbar navbar-default">
-        <!-- navbar navbar-default Begin -->
+        <!--  navbar navbar-default:    Begin  -->
 
         <div class="container">
-            <!-- container Begin -->
+            <!--  container:    Begin  -->
 
-            <div class="navbar-header">
-                <!-- navbar-header Begin -->
+            <div class="nav-header">
+                <!--  nav-header:    Begin  -->
 
                 <a href="index.php" class="navbar-brand home">
                     <!-- navbar-brand home Begin -->
@@ -72,7 +68,7 @@
 
                 <button class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
 
-                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="sr-only">Toggle navigation</span>
 
                     <i class="fa fa-align-justify"></i>
 
@@ -86,9 +82,9 @@
 
                 </button>
 
-            </div><!-- navbar-header Finish -->
+            </div><!--  nav-header:    Finish  -->
 
-            <div class="navbar-collapse collapse" id="navigation">
+            <div class="collapse navbar-collapse" id="navigation">
                 <!-- navbar-collapse collapse Begin -->
 
                 <div class="padding-nav">
@@ -104,7 +100,7 @@
                             <a href="shop.php">Shop</a>
                         </li>
                         <li>
-                            <a href="customer/my_account.php">My Account</a>
+                            <a href="checkout.php">My Account</a>
                         </li>
                         <li>
                             <a href="cart.php">Shopping Cart</a>
@@ -118,6 +114,7 @@
                 </div><!-- padding-nav Finish -->
 
                 <a href="cart.php" class="btn navbar-btn btn-primary right">
+
                     <!-- btn navbar-btn btn-primary Begin -->
 
                     <i class="fa fa-shopping-cart"></i>
@@ -135,8 +132,6 @@
                         <span class="sr-only">Toggle Search</span>
 
                         <i class="fa fa-search"></i>
-
-                    </button><!-- btn btn-primary navbar-btn Finish -->
 
                 </div><!-- navbar-collapse collapse right Finish -->
 
@@ -171,21 +166,23 @@
 
             </div><!-- navbar-collapse collapse Finish -->
 
-        </div><!-- container Finish -->
+        </div><!--  container:    Finish  -->
 
-    </div><!-- navbar navbar-default Finish -->
+    </div><!--  navbar navbar-default:    Finish  -->
 
     <div id="content">
         <!-- #content Begin -->
+
         <div class="container">
-            <!-- container Begin -->
-            <div class="col-md-12">
+            <!-- #container Begin -->
+
+            <div class="co-md-12">
                 <!-- col-md-12 Begin -->
 
                 <ul class="breadcrumb">
                     <!-- breadcrumb Begin -->
                     <li>
-                        <a href="index.php">Home</a>
+                        <a href="index.html">Home</a>
                     </li>
                     <li>
                         Register
@@ -217,7 +214,12 @@
                         <center>
                             <!-- center Begin -->
 
-                            <h2> Register a new account </h2>
+                            <h2>Register a new account</h2>
+
+                            <p class="text-muted">
+
+                                If you have any questions, feel free to contact us. Our Customer Service work <strong>24/7</strong>
+                            </p>
 
                         </center><!-- center Finish -->
 
@@ -315,7 +317,8 @@
 
             </div><!-- col-md-9 Finish -->
 
-        </div><!-- container Finish -->
+        </div><!-- #container Finish -->
+
     </div><!-- #content Finish -->
 
     <?php
