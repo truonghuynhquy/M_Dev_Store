@@ -204,8 +204,8 @@ include("includes/db.php");
 
                     $run_slides = mysqli_query($con, $get_slides);
 
-                    while ($row_slides = mysqli_fetch_array($run_slides)) {
-
+                    while($row_slides = mysqli_fetch_array($run_slides)) {
+                    
                         $slide_name = $row_slides['slide_name'];
                         $slide_image = $row_slides['slide_image'];
 
@@ -218,26 +218,7 @@ include("includes/db.php");
                         </div>
 
                         ";
-                    }
-
-                    $get_slides = "select * from slider LIMIT 1,3";
-
-                    $run_slides = mysqli_query($con, $get_slides);
-
-                    while ($row_slides = mysqli_fetch_array($run_slides)) {
-
-                        $slide_name = $row_slides['slide_name'];
-                        $slide_image = $row_slides['slide_image'];
-
-                        echo "
-                        
-                        <div class='item'>
-                        
-                        <img src='admin_area/slides_images/$slide_image'>
-                        
-                        </div>
-                        
-                        ";
+                    
                     }
 
                     ?>
