@@ -243,14 +243,6 @@
 
                     ?>
 
-                    <?php
-
-                    if (isset($_GET['delete_account'])) {
-                        include("delete_account.php");
-                    }
-
-                    ?>
-
                 </div><!-- box Finish -->
 
             </div><!-- col-md-9 Finish -->
