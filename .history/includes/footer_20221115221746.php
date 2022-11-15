@@ -45,7 +45,7 @@
 
                     $run_p_cats = mysqli_query($con, $get_p_cats);
 
-                    while ($row_p_cats = mysqli_fetch_array($run_p_cats)) {
+                    while($row_p_cats= mysqli_fetch_array($run_p_cats)){
 
                         $p_cat_id = $row_p_cats['p_cat_id'];
 
@@ -64,6 +64,7 @@
                             </li>
                         
                         ";
+
                     }
 
                     ?>
@@ -105,14 +106,12 @@
                     Dont miss our latest update products.
                 </p>
 
-                <form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=M-devMedia', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" method="post">
+                <form action="" method="post">
                     <!-- form begin -->
                     <div class="input-group">
                         <!-- input-group begin -->
 
                         <input type="text" class="form-control" name="email">
-
-                        <input type="hidden" value="M-devMedia" name="uri"/><input type="hidden" name="loc" value="en_US"/>
 
                         <span class="input-group-btn">
                             <!-- input-group-btn begin -->

@@ -112,8 +112,6 @@
 
                         <input type="text" class="form-control" name="email">
 
-                        <input type="hidden" value="M-devMedia" name="uri"/><input type="hidden" name="loc" value="en_US"/>
-
                         <span class="input-group-btn">
                             <!-- input-group-btn begin -->
 

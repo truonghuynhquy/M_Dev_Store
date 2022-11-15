@@ -375,11 +375,7 @@ include("functions/functions.php");
         <div class="row">
             <!-- row Begin -->
 
-            <?php
-
-            getPro();
-
-            ?>
+            
 
         </div> <!-- row Finish -->
 
