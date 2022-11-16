@@ -1,6 +1,5 @@
 <?php 
 
-    $active='Cart';
     include("includes/header.php");
 
 ?>

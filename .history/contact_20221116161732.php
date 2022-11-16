@@ -1,6 +1,5 @@
 <?php 
 
-    $active='Contact';
     include("includes/header.php");
 
 ?>
