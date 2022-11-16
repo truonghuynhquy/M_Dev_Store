@@ -7,22 +7,26 @@ include("includes/header.php");
 
 <div id="content">
     <!-- #content Begin -->
+
     <div class="container">
         <!-- container Begin -->
+
         <div class="col-md-12">
             <!-- col-md-12 Begin -->
 
             <ul class="breadcrumb">
                 <!-- breadcrumb Begin -->
+
                 <li>
                     <a href="index.php">Home</a>
                 </li>
                 <li>
                     Shop
                 </li>
+
             </ul><!-- breadcrumb Finish -->
 
-        </div><!-- col-md-12 Finish -->
+        </div><!-- col-md-12 Finish  -->
 
         <div class="col-md-3">
             <!-- col-md-3 Begin -->
@@ -30,7 +34,6 @@ include("includes/header.php");
             <?php
 
             include("includes/sidebar.php");
-
             ?>
 
         </div><!-- col-md-3 Finish -->
@@ -45,15 +48,19 @@ include("includes/header.php");
                 if (!isset($_GET['cat'])) {
 
                     echo "
+                        
+                            <div class='box'><!-- box Begin -->
+                            
+                                <h1>Shop</h1>
 
-                       <div class='box'><!-- box Begin -->
-                           <h1>Shop</h1>
-                           <p>
-                               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo deleniti accusamus, consequuntur illum quasi ut. Voluptate a, ipsam repellendus ut fugiat minima? Id facilis itaque autem, officiis veritatis perferendis, quaerat!
-                           </p>
-                       </div><!-- box Finish -->
-
-                       ";
+                                <p>
+                                
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo deleniti accusamus, consequuntur illum quasi ut. Voluptate a, ipsam repellendus ut fugiat minima? Id facilis itaque autem, officiis veritatis perferendis, quaerat!
+                                
+                                </p>
+                            
+                            </div>
+                        ";
                 }
             }
 
@@ -80,7 +87,7 @@ include("includes/header.php");
 
                         $start_from = ($page - 1) * $per_page;
 
-                        $get_products = "select * from products order by 1 DESC LIMIT $start_from,$per_page";
+                        $get_products = "select * from products order by 1 DESC LIMIT $start_from, $per_page";
 
                         $run_products = mysqli_query($con, $get_products);
 
@@ -144,70 +151,32 @@ include("includes/header.php");
                                 
                                 ";
                         }
+                    }
+                }
 
                 ?>
 
-            </div><!-- row Finish -->
+            </div><!-- row Finish  -->
 
             <center>
+
                 <ul class="pagination">
-                    <!-- pagination Begin -->
-                    <?php
+                    <li class="active"><a href="#">First Page</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">Last Page</a></li>
+                </ul>
 
-                                $query = "select * from products";
-
-                                $result = mysqli_query($con, $query);
-
-                                $total_records = mysqli_num_rows($result);
-
-                                $total_pages = ceil($total_records / $per_page);
-
-                                echo "
-                                
-                                    <li>
-                                    
-                                        <a href='shop.php?page=1'> " . 'First Page' . " </a>
-                                    
-                                    </li>
-                                
-                                ";
-
-                                for ($i = 1; $i <= $total_pages; $i++) {
-
-                                    echo "
-                                
-                                    <li>
-                                    
-                                        <a href='shop.php?page=" . $i . "'> " . $i . " </a>
-                                    
-                                    </li>
-                                
-                                ";
-                                };
-
-                                echo "
-                                
-                                    <li>
-                                    
-                                        <a href='shop.php?page=$total_pages'> " . 'Last Page' . " </a>
-                                    
-                                    </li>
-                                
-                                ";
-                            }
-                        }
-
-                    ?>
-
-                </ul><!-- pagination Finish -->
             </center>
-
-            <?php getpcatpro(); ?>
 
         </div><!-- col-md-9 Finish -->
 
-    </div><!-- container Finish -->
-</div><!-- #content Finish -->
+    </div><!-- container Finish  -->
+
+</div> <!-- #content Finish  -->
 
 <?php
 

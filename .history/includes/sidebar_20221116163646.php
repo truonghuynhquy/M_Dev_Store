@@ -14,11 +14,11 @@
         <ul class="nav nav-pills nav-stacked category-menu">
             <!-- nav nav-pills nav-stacked category-menu Begin -->
 
-            <li><a href="#">Jackets</a></li>
-            <li><a href="#">Accessories</a></li>
-            <li><a href="#">Shoes</a></li>
-            <li><a href="#">Coats</a></li>
-            <li><a href="#">T-Shirt</a></li>
+            <?php
+
+            getPCats();
+
+            ?>
 
         </ul><!-- nav nav-pills nav-stacked category-menu Finish -->
 
