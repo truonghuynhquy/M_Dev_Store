@@ -396,5 +396,3 @@ function getcatpro(){
 }
 
 /// finish getcatpro functions ///
-
-?>
