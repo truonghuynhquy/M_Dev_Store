@@ -267,11 +267,11 @@ include("includes/header.php");
                     $pro_img1 = $row_products['product_img1'];
 
                     echo "
-                    
+                       
                     <div class='col-md-3 col-sm-6 center-responsive'><!-- col-md-3 col-sm-6 center-responsive Begin -->
-                        <div class='product same-height'><!-- product same-height Begin -->
-                            <a href='details.php?pro_id=$pro_id'>
-                                <img class='img-responsive' src='admin_area/product_images/$pro_img1' alt='Product 6'>
+                       <div class='product same-height'><!-- product same-height Begin -->
+                           <a href='details.php?pro_id=$pro_id'>
+                               <img class='img-responsive' src='admin_area/product_images/$pro_img1' alt='Product 6'>
                             </a>
                             
                             <div class='text'><!-- text Begin -->
@@ -282,9 +282,9 @@ include("includes/header.php");
                             </div><!-- text Finish -->
                             
                         </div><!-- product same-height Finish -->
-                    </div><!-- col-md-3 col-sm-6 center-responsive Finish -->
-                
-                    ";
+                   </div><!-- col-md-3 col-sm-6 center-responsive Finish -->
+                   
+                       ";
                 }
 
                 ?>
