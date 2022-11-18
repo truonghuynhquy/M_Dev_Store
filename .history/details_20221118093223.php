@@ -25,6 +25,7 @@ include("includes/header.php");
                     <a href="shop.php?p_cat=<?php echo $p_cat_id; ?>"><?php echo $p_cat_title; ?></a>
                 </li>
                 <li> <?php echo $pro_title; ?> </li>
+
             </ul><!-- breadcrumb Finish -->
 
         </div><!-- col-md-12 Finish -->
@@ -89,11 +90,11 @@ include("includes/header.php");
                     <!-- col-sm-6 Begin -->
                     <div class="box">
                         <!-- box Begin -->
-                        <h1 class="text-center"> <?php echo $pro_title; ?> </h1>
+                        <h1 class="text-center"><?php echo $pro_title; ?></h1>
 
-                        <?php add_cart(); ?>
+                        <?php add_cart() ?>
 
-                        <form action="details.php?add_cart=<?php echo $product_id; ?>" class="form-horizontal" method="post">
+                        <form action="index.php?add_cart=<?php echo $pro_id; ?>" class="form-horizontal" method="post">
                             <!-- form-horizontal Begin -->
                             <div class="form-group">
                                 <!-- form-group Begin -->
@@ -124,7 +125,7 @@ include("includes/header.php");
                                     <select name="product_size" class="form-control" required oninput="setCustomValidity('')" oninvalid="setCustomValidity('Must pick 1 size for the product')">
                                         <!-- form-control Begin -->
 
-                                        <option disabled selected>Select a Size</option>
+                                        <option  disabled selected>Select a Size</option>
                                         <option>Small</option>
                                         <option>Medium</option>
                                         <option>Large</option>
@@ -134,7 +135,7 @@ include("includes/header.php");
                                 </div><!-- col-md-7 Finish -->
                             </div><!-- form-group Finish -->
 
-                            <p class="price">$ <?php echo $pro_price; ?></p>
+                            <p class="price">$ <?php echo $pro_price ?> </p>
 
                             <p class="text-center buttons"><button class="btn btn-primary i fa fa-shopping-cart"> Add to cart</button></p>
 
@@ -211,7 +212,7 @@ include("includes/header.php");
 
                 <?php
 
-                $get_products = "select * from products order by rand() LIMIT 0,3";
+                $get_products = "select * from products order by 1 DESC LIMIT 0,3";
 
                 $run_products = mysqli_query($con, $get_products);
 
@@ -226,8 +227,8 @@ include("includes/header.php");
                     $pro_price = $row_products['product_price'];
 
                     echo "
-                       
-                        <div class='col-md-3 col-sm-6 center-responsive'>
+                    
+                    <div class='col-md-3 col-sm-6 center-responsive'>
                         
                             <div class='product same-height'>
                             
@@ -248,8 +249,8 @@ include("includes/header.php");
                             </div>
                         
                         </div>
-                       
-                       ";
+                    
+                    ";
                 }
 
                 ?>
