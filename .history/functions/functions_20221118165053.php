@@ -463,6 +463,7 @@ function items()
     $count_items = mysqli_num_rows($run_items);
 
     echo $count_items;
+
 }
 
 /// finish items functions ///
@@ -482,7 +483,7 @@ function total_price()
 
     $run_cart = mysqli_query($db, $select_cart);
 
-    while ($record = mysqli_fetch_array($run_cart)) {
+    while($record = mysqli_fetch_array($run_cart)){
 
         $pro_id = $record['p_id'];
 
@@ -492,15 +493,16 @@ function total_price()
 
         $run_price = mysqli_query($db, $get_price);
 
-        while ($row_price = mysqli_fetch_array($run_price)) {
-
-            $sub_total = $row_price['product_price'] * $pro_qty;
-
+        while($row_price=mysqli_fetch_array($run_price)){
+            
+            $sub_total = $row_price['product_price']*$pro_qty;
+            
             $total += $sub_total;
+            
         }
+
     }
 
-    echo "$" . $total;
 }
 
 /// finish total_price functions ///

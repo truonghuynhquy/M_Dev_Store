@@ -504,3 +504,5 @@ function total_price()
 }
 
 /// finish total_price functions ///
+
+?>
