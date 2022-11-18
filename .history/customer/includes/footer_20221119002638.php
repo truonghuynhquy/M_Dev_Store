@@ -31,7 +31,7 @@
                         echo "<a href='../checkout.php'>Login</a>";
                     } else {
 
-                        echo "<a href='my_account.php?my_orders'>My Account</a>";
+                        echo "<a href='customer/my_account.php?my_orders'>My Account</a>";
                     }
 
                     ?>
