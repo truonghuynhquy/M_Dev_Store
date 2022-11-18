@@ -226,27 +226,8 @@ include("includes/header.php");
 
                     echo "
                     
-                    <div class='col-md-3 col-sm-6 center-responsive'>
-                        
-                            <div class='product same-height'>
-                            
-                                <a href='details.php?pro_id=$pro_id'>
-                                
-                                    <img class='img-responsive' src='admin_area/product_images/$pro_img1'>
-                                
-                                </a>
-                                
-                                <div class='text'>
-                                
-                                    <h3> <a href='details.php?pro_id=$pro_id'> $pro_title </a> </h3>
-                                    
-                                    <p class='price'> $ $pro_price </p>
-                                
-                                </div>
-                            
-                            </div>
-                        
-                        </div>
+                    <div class='col-md-6 col-sm-6'>
+
                     
                     ";
                 }

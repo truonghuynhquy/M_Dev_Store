@@ -25,7 +25,6 @@ include("includes/header.php");
                     <a href="shop.php?p_cat=<?php echo $p_cat_id; ?>"><?php echo $p_cat_title; ?></a>
                 </li>
                 <li> <?php echo $pro_title; ?> </li>
-
             </ul><!-- breadcrumb Finish -->
 
         </div><!-- col-md-12 Finish -->
@@ -60,13 +59,13 @@ include("includes/header.php");
 
                             <div class="carousel-inner">
                                 <div class="item active">
-                                    <center><img class="img-responsive" src="admin_area/product_images/<?php echo $pro_img1; ?>" alt="Product 3-a"></center>
+                                    <center><img class="img-responsive" src="admin_area/product_images/Product-3a.jpg" alt="Product 3-a"></center>
                                 </div>
                                 <div class="item">
-                                    <center><img class="img-responsive" src="admin_area/product_images/<?php echo $pro_img2; ?>" alt="Product 3-b"></center>
+                                    <center><img class="img-responsive" src="admin_area/product_images/Product-3b.jpg" alt="Product 3-b"></center>
                                 </div>
                                 <div class="item">
-                                    <center><img class="img-responsive" src="admin_area/product_images/<?php echo $pro_img3; ?>" alt="Product 3-c"></center>
+                                    <center><img class="img-responsive" src="admin_area/product_images/Product-3c.jpg" alt="Product 3-c"></center>
                                 </div>
                             </div>
 
@@ -90,9 +89,9 @@ include("includes/header.php");
                     <!-- col-sm-6 Begin -->
                     <div class="box">
                         <!-- box Begin -->
-                        <h1 class="text-center"><?php echo $pro_title; ?></h1>
+                        <h1 class="text-center">M-Dev Polo Shirt Men</h1>
 
-                        <form action="index.php?add_cart=<?php echo $pro_id; ?>" class="form-horizontal" method="post">
+                        <form action="details.php" class="form-horizontal" method="post">
                             <!-- form-horizontal Begin -->
                             <div class="form-group">
                                 <!-- form-group Begin -->
@@ -133,7 +132,7 @@ include("includes/header.php");
                                 </div><!-- col-md-7 Finish -->
                             </div><!-- form-group Finish -->
 
-                            <p class="price">$ <?php echo $pro_price ?> </p>
+                            <p class="price">$50</p>
 
                             <p class="text-center buttons"><button class="btn btn-primary i fa fa-shopping-cart"> Add to cart</button></p>
 
@@ -148,7 +147,7 @@ include("includes/header.php");
                             <!-- col-xs-4 Begin -->
                             <a data-target="#myCarousel" data-slide-to="0" href="#" class="thumb">
                                 <!-- thumb Begin -->
-                                <img src="admin_area/product_images/<?php echo $pro_img1; ?>" alt="product 1" class="img-responsive">
+                                <img src="admin_area/product_images/Product-3a.jpg" alt="product 1" class="img-responsive">
                             </a><!-- thumb Finish -->
                         </div><!-- col-xs-4 Finish -->
 
@@ -156,7 +155,7 @@ include("includes/header.php");
                             <!-- col-xs-4 Begin -->
                             <a data-target="#myCarousel" data-slide-to="1" href="#" class="thumb">
                                 <!-- thumb Begin -->
-                                <img src="admin_area/product_images/<?php echo $pro_img2; ?>" alt="product 2" class="img-responsive">
+                                <img src="admin_area/product_images/Product-3b.jpg" alt="product 2" class="img-responsive">
                             </a><!-- thumb Finish -->
                         </div><!-- col-xs-4 Finish -->
 
@@ -164,7 +163,7 @@ include("includes/header.php");
                             <!-- col-xs-4 Begin -->
                             <a data-target="#myCarousel" data-slide-to="2" href="#" class="thumb">
                                 <!-- thumb Begin -->
-                                <img src="admin_area/product_images/<?php echo $pro_img3; ?>" alt="product 4" class="img-responsive">
+                                <img src="admin_area/product_images/Product-3c.jpg" alt="product 4" class="img-responsive">
                             </a><!-- thumb Finish -->
                         </div><!-- col-xs-4 Finish -->
 
@@ -182,7 +181,7 @@ include("includes/header.php");
 
                 <p>
 
-                    <?php echo $pro_desc; ?>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione praesentium ipsum accusantium facere nulla, beatae vitae consequatur enim et nesciunt possimus doloribus omnis dolorum, ea quibusdam excepturi asperiores, temporibus! Consequatur?
 
                 </p>
 
@@ -208,50 +207,62 @@ include("includes/header.php");
                     </div><!-- box same-height headline Finish -->
                 </div><!-- col-md-3 col-sm-6 Finish -->
 
-                <?php
+                <div class="col-md-3 col-sm-6 center-responsive">
+                    <!-- col-md-3 col-sm-6 center-responsive Begin -->
+                    <div class="product same-height">
+                        <!-- product same-height Begin -->
+                        <a href="details.php">
+                            <img class="img-responsive" src="admin_area/product_images/Product-6a.jpg" alt="Product 6">
+                        </a>
 
-                $get_products = "select * from products order by 1 DESC LIMIT 0,3";
+                        <div class="text">
+                            <!-- text Begin -->
+                            <h3><a href="details.php">M-Dev Tank Top Women</a></h3>
 
-                $run_products = mysqli_query($con, $get_products);
+                            <p class="price">$40</p>
 
-                while ($row_products = mysqli_fetch_array($run_products)) {
+                        </div><!-- text Finish -->
 
-                    $pro_id = $row_products['product_id'];
+                    </div><!-- product same-height Finish -->
+                </div><!-- col-md-3 col-sm-6 center-responsive Finish -->
 
-                    $pro_title = $row_products['product_title'];
+                <div class="col-md-3 col-sm-6 center-responsive">
+                    <!-- col-md-3 col-sm-6 center-responsive Begin -->
+                    <div class="product same-height">
+                        <!-- product same-height Begin -->
+                        <a href="details.php">
+                            <img class="img-responsive" src="admin_area/product_images/Product-5a.jpg" alt="Product 6">
+                        </a>
 
-                    $pro_img1 = $row_products['product_img1'];
+                        <div class="text">
+                            <!-- text Begin -->
+                            <h3><a href="details.php">M-Dev Street Shirt Women</a></h3>
 
-                    $pro_price = $row_products['product_price'];
+                            <p class="price">$45</p>
 
-                    echo "
-                    
-                    <div class='col-md-3 col-sm-6 center-responsive'>
-                        
-                            <div class='product same-height'>
-                            
-                                <a href='details.php?pro_id=$pro_id'>
-                                
-                                    <img class='img-responsive' src='admin_area/product_images/$pro_img1'>
-                                
-                                </a>
-                                
-                                <div class='text'>
-                                
-                                    <h3> <a href='details.php?pro_id=$pro_id'> $pro_title </a> </h3>
-                                    
-                                    <p class='price'> $ $pro_price </p>
-                                
-                                </div>
-                            
-                            </div>
-                        
-                        </div>
-                    
-                    ";
-                }
+                        </div><!-- text Finish -->
 
-                ?>
+                    </div><!-- product same-height Finish -->
+                </div><!-- col-md-3 col-sm-6 center-responsive Finish -->
+
+                <div class="col-md-3 col-sm-6 center-responsive">
+                    <!-- col-md-3 col-sm-6 center-responsive Begin -->
+                    <div class="product same-height">
+                        <!-- product same-height Begin -->
+                        <a href="details.php">
+                            <img class="img-responsive" src="admin_area/product_images/Product-4a.jpg" alt="Product 6">
+                        </a>
+
+                        <div class="text">
+                            <!-- text Begin -->
+                            <h3><a href="details.php">M-Dev Polo T-Shirt Women</a></h3>
+
+                            <p class="price">$50</p>
+
+                        </div><!-- text Finish -->
+
+                    </div><!-- product same-height Finish -->
+                </div><!-- col-md-3 col-sm-6 center-responsive Finish -->
 
             </div><!-- #row same-heigh-row Finish -->
 

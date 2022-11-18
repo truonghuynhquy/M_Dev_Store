@@ -5,106 +5,65 @@ include("functions/functions.php");
 
 ?>
 
-<?php
-
-if (isset($_GET['pro_id'])) {
-
-    $product_id = $_GET['pro_id'];
-
-    $get_product = "select * from products where product_id='$product_id'";
-
-    $run_product = mysqli_query($con, $get_product);
-
-    $row_product = mysqli_fetch_array($run_product);
-
-    $p_cat_id = $row_product['p_cat_id'];
-
-    $pro_title = $row_product['product_title'];
-
-    $pro_price = $row_product['product_price'];
-
-    $pro_desc = $row_product['product_desc'];
-
-    $pro_img1 = $row_product['product_img1'];
-
-    $pro_img2 = $row_product['product_img2'];
-
-    $pro_img3 = $row_product['product_img3'];
-
-    $get_p_cat = "select * from product_categories where p_cat_id='$p_cat_id'";
-
-    $run_p_cat = mysqli_query($con, $get_p_cat);
-
-    $row_p_cat = mysqli_fetch_array($run_p_cat);
-
-    $p_cat_title = $row_p_cat['p_cat_title'];
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>M-Dev Store</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M-Dev Shop</title>
     <link rel="stylesheet" href="styles/bootstrap-337.min.css">
-    <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
 </head>
 
 <body>
-
     <div id="top">
-        <!-- Top Begin -->
+        <!--  Top:     Begin  -->
 
         <div class="container">
-            <!-- container Begin -->
-
+            <!--  Container:     Begin  -->
             <div class="col-md-6 offer">
-                <!-- col-md-6 offer Begin -->
-
+                <!--  col-md-6 offer:     Begin  -->
                 <a href="#" class="btn btn-success btn-sm">Welcome</a>
-                <a href="checkout.php">4 Items In Your Cart | Total Price: $300 </a>
+                <a href="checkout.php">4 Items In Your Cart | Total Price: $300</a>
+            </div><!--  col-md-6:     Finish  -->
 
-            </div><!-- col-md-6 offer Finish -->
-
-            <div class="col-md-6">
-                <!-- col-md-6 Begin -->
+            <div class="col md-6">
+                <!--  col-md-6:     Begin  -->
 
                 <ul class="menu">
-                    <!-- cmenu Begin -->
-
+                    <!--  menu:     Begin  -->
                     <li>
                         <a href="customer_register.php">Register</a>
                     </li>
                     <li>
-                        <a href="checkout.php">My Account</a>
+                        <a href="customer/my_account.php">My Account</a>
                     </li>
                     <li>
-                        <a href="cart.php">Go To Cart</a>
+                        <a href="cart.php">Go to Cart</a>
                     </li>
                     <li>
                         <a href="checkout.php">Login</a>
                     </li>
 
-                </ul><!-- menu Finish -->
+                </ul><!--  menu:     Finish  -->
 
-            </div><!-- col-md-6 Finish -->
+            </div><!--  col-md-6:     Finish  -->
 
-        </div><!-- container Finish -->
+        </div><!--  Container:     Finish  -->
 
-    </div><!-- Top Finish -->
+    </div><!--  Top:    Finish  -->
 
     <div id="navbar" class="navbar navbar-default">
-        <!-- navbar navbar-default Begin -->
+        <!--  navbar navbar-default:    Begin  -->
 
         <div class="container">
-            <!-- container Begin -->
+            <!--  container:    Begin  -->
 
-            <div class="navbar-header">
-                <!-- navbar-header Begin -->
+            <div class="nav-header">
+                <!--  nav-header:    Begin  -->
 
                 <a href="index.php" class="navbar-brand home">
                     <!-- navbar-brand home Begin -->
@@ -116,7 +75,7 @@ if (isset($_GET['pro_id'])) {
 
                 <button class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
 
-                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="sr-only">Toggle navigation</span>
 
                     <i class="fa fa-align-justify"></i>
 
@@ -130,9 +89,9 @@ if (isset($_GET['pro_id'])) {
 
                 </button>
 
-            </div><!-- navbar-header Finish -->
+            </div><!--  nav-header:    Finish  -->
 
-            <div class="navbar-collapse collapse" id="navigation">
+            <div class="collapse navbar-collapse" id="navigation">
                 <!-- navbar-collapse collapse Begin -->
 
                 <div class="padding-nav">
@@ -141,19 +100,19 @@ if (isset($_GET['pro_id'])) {
                     <ul class="nav navbar-nav left">
                         <!-- nav navbar-nav left Begin -->
 
-                        <li class="<?php if ($active == 'Home') echo "active"; ?>">
+                        <li class="<?php if($active=='Home') echo"active"; ?>">
                             <a href="index.php">Home</a>
                         </li>
-                        <li class="<?php if ($active == 'Shop') echo "active"; ?>">
+                        <li class="<?php if($active=='Shop') echo"active"; ?>">
                             <a href="shop.php">Shop</a>
                         </li>
-                        <li class="<?php if ($active == 'Account') echo "active"; ?>">
+                        <li class="<?php if($active=='Account') echo"active"; ?>">
                             <a href="customer/my_account.php">My Account</a>
                         </li>
-                        <li class="<?php if ($active == 'Cart') echo "active"; ?>">
+                        <li class="<?php if($active=='Cart') echo"active"; ?>">
                             <a href="cart.php">Shopping Cart</a>
                         </li>
-                        <li class="<?php if ($active == 'Contact') echo "active"; ?>">
+                        <li class="<?php if($active=='Contact') echo"active"; ?>">
                             <a href="contact.php">Contact Us</a>
                         </li>
 
@@ -162,6 +121,7 @@ if (isset($_GET['pro_id'])) {
                 </div><!-- padding-nav Finish -->
 
                 <a href="cart.php" class="btn navbar-btn btn-primary right">
+
                     <!-- btn navbar-btn btn-primary Begin -->
 
                     <i class="fa fa-shopping-cart"></i>
@@ -179,8 +139,6 @@ if (isset($_GET['pro_id'])) {
                         <span class="sr-only">Toggle Search</span>
 
                         <i class="fa fa-search"></i>
-
-                    </button><!-- btn btn-primary navbar-btn Finish -->
 
                 </div><!-- navbar-collapse collapse right Finish -->
 
@@ -215,6 +173,6 @@ if (isset($_GET['pro_id'])) {
 
             </div><!-- navbar-collapse collapse Finish -->
 
-        </div><!-- container Finish -->
+        </div><!--  container:    Finish  -->
 
-    </div><!-- navbar navbar-default Finish -->
+    </div><!--  navbar navbar-default:    Finish  -->
