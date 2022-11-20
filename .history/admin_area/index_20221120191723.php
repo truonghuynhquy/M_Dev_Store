@@ -53,5 +53,4 @@ if (!isset($_SESSION['admin_email'])) {
 
     </html>
 
-
 <?php } ?>
