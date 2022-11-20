@@ -143,10 +143,10 @@ if (!isset($_SESSION['admin_email'])) {
                                             $cat_title = $row_cat['cat_title'];
 
                                             echo "
-                                
-                                            <option value='$cat_id'> $cat_title </option>
-                                
-                                            ";
+                                  
+                                  <option value='$cat_id'> $cat_title </option>
+                                  
+                                  ";
                                         }
 
                                         ?>
