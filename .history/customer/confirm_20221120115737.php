@@ -10,8 +10,12 @@ if (!isset($_SESSION['customer_email'])) {
     include("includes/db.php");
     include("functions/functions.php");
 
-?>
+    if (isset($_GET['order_id'])) {
 
+        $order_id = $_GET['order_id'];
+    }
+
+?>
     <!DOCTYPE html>
     <html lang="en">
 
@@ -253,45 +257,88 @@ if (!isset($_SESSION['customer_email'])) {
                     <div class="box">
                         <!-- box Begin -->
 
-                        <?php
+                        <h1 align="center"> Please confirm your payment</h1>
 
-                        if (isset($_GET['my_orders'])) {
-                            include("my_orders.php");
-                        }
+                        <form action="confirm.php?update_id='<?php echo $order_id;  ?>'" method="post" enctype="multipart/form-data">
+                            <!-- form Begin -->
+                            <!-- form Begin -->
 
-                        ?>
+                            <div class="form-group">
+                                <!-- form-group Begin -->
 
-                        <?php
+                                <label> Invoice No: </label>
 
-                        if (isset($_GET['pay_offline'])) {
-                            include("pay_offline.php");
-                        }
+                                <input type="text" class="form-control" name="invoice_no" required>
 
-                        ?>
+                            </div><!-- form-group Finish -->
 
-                        <?php
+                            <div class="form-group">
+                                <!-- form-group Begin -->
 
-                        if (isset($_GET['edit_account'])) {
-                            include("edit_account.php");
-                        }
+                                <label> Amount Sent: </label>
 
-                        ?>
+                                <input type="text" class="form-control" name="amount_sent" required>
 
-                        <?php
+                            </div><!-- form-group Finish -->
 
-                        if (isset($_GET['change_pass'])) {
-                            include("change_pass.php");
-                        }
+                            <div class="form-group">
+                                <!-- form-group Begin -->
 
-                        ?>
+                                <label> Select Payment Mode: </label>
 
-                        <?php
+                                <select name="payment_mode" class="form-control">
+                                    <!-- form-control Begin -->
 
-                        if (isset($_GET['delete_account'])) {
-                            include("delete_account.php");
-                        }
+                                    <option> Select Payment Mode </option>
+                                    <option> Back Code </option>
+                                    <option> UBL / Omni Paisa </option>
+                                    <option> Easy Paisa </option>
+                                    <option> Western Union </option>
 
-                        ?>
+                                </select><!-- form-control Finish -->
+
+                            </div><!-- form-group Finish -->
+
+                            <div class="form-group">
+                                <!-- form-group Begin -->
+
+                                <label> Transaction / Reference ID: </label>
+
+                                <input type="text" class="form-control" name="ref_no" required>
+
+                            </div><!-- form-group Finish -->
+
+                            <div class="form-group">
+                                <!-- form-group Begin -->
+
+                                <label> Omni Paisa / Easy Paisa: </label>
+
+                                <input type="text" class="form-control" name="code" required>
+
+                            </div><!-- form-group Finish -->
+
+                            <div class="form-group">
+                                <!-- form-group Begin -->
+
+                                <label> Payment Date: </label>
+
+                                <input type="text" class="form-control" name="date" required>
+
+                            </div><!-- form-group Finish -->
+
+                            <div class="text-center">
+                                <!-- text-center Begin -->
+
+                                <button class="btn btn-primary btn-lg">
+                                    <!-- tn btn-primary btn-lg Begin -->
+
+                                    <i class="fa fa-user-md"></i> Confirm Payment
+
+                                </button><!-- tn btn-primary btn-lg Finish -->
+
+                            </div><!-- text-center Finish -->
+
+                        </form><!-- form Finish -->
 
                     </div><!-- box Finish -->
 
