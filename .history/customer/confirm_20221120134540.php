@@ -290,8 +290,8 @@ if (!isset($_SESSION['customer_email'])) {
 
                                     <option> Select Payment Mode </option>
                                     <option> Back Code </option>
-                                    <option> Paypall </option>
-                                    <option> Payoneer </option>
+                                    <option> UBL / Omni Paisa </option>
+                                    <option> Easy Paisa </option>
                                     <option> Western Union </option>
 
                                 </select><!-- form-control Finish -->
@@ -310,7 +310,7 @@ if (!isset($_SESSION['customer_email'])) {
                             <div class="form-group">
                                 <!-- form-group Begin -->
 
-                                <label> Paypall / Payoneer / Western Union Code: </label>
+                                <label> Omni Paisa / Easy Paisa: </label>
 
                                 <input type="text" class="form-control" name="code" required>
 
@@ -328,7 +328,7 @@ if (!isset($_SESSION['customer_email'])) {
                             <div class="text-center">
                                 <!-- text-center Begin -->
 
-                                <button class="btn btn-primary btn-lg" name="confirm_payment">
+                                <button class="btn btn-primary btn-lg">
                                     <!-- tn btn-primary btn-lg Begin -->
 
                                     <i class="fa fa-user-md"></i> Confirm Payment

@@ -104,7 +104,7 @@
 
                     <td>
 
-                        <a href="confirm.php?order_id=<?php echo $order_id; ?>" target="_blank" class="btn btn-primary btn-sm"> Confirm Paid </a>
+                        <<a href="confirm.php?order_id=<?php echo $order_id; ?>" target="_blank" class="btn btn-primary btn-sm"> Confirm Paid </a>
                     </td>
 
                 </tr><!--  tr Finish  -->

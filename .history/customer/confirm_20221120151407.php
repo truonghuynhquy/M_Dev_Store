@@ -310,7 +310,7 @@ if (!isset($_SESSION['customer_email'])) {
                             <div class="form-group">
                                 <!-- form-group Begin -->
 
-                                <label> Paypall / Payoneer / Western Union Code: </label>
+                                <label> Omni Paisa / Easy Paisa: </label>
 
                                 <input type="text" class="form-control" name="code" required>
 
